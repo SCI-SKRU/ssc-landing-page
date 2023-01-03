@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 
 import NavBar from "./components/NavBar";
 import theme from "./config/Theme";
-import video from "./assets/videos/videoTitle.mp4";
+import video from "./assets/videos/videoTitle.webm";
 
 export function App() {
   return (
