@@ -1,37 +1,37 @@
 @font-face {
-  font-family: 'LINE Seed Sans TH';
-  src: url('../../assets/fonts/LINESeedSansTH_W_Th.woff2') format('woff2');
+  font-family: "LINE Seed Sans TH";
+  src: url("../../assets/fonts/LINESeedSansTH_W_Th.woff2") format("woff2");
   font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'LINE Seed Sans TH';
-  src: url('../../assets/fonts/LINESeedSansTH_W_Rg.woff2') format('woff2');
+  font-family: "LINE Seed Sans TH";
+  src: url("../../assets/fonts/LINESeedSansTH_W_Rg.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'LINE Seed Sans TH';
-  src: url('../../assets/fonts/LINESeedSansTH_W_Bd.woff2') format('woff2');
+  font-family: "LINE Seed Sans TH";
+  src: url("../../assets/fonts/LINESeedSansTH_W_Bd.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'LINE Seed Sans TH';
-  src: url('../../assets/fonts/LINESeedSansTH_W_XBd.woff2') format('woff2');
+  font-family: "LINE Seed Sans TH";
+  src: url("../../assets/fonts/LINESeedSansTH_W_XBd.woff2") format("woff2");
   font-style: normal;
   font-weight: 800;
 }
 
-body { 
-  font-family: 'LINE Seed Sans TH', sans-serif;
+body {
+  font-family: "LINE Seed Sans TH", sans-serif;
 }
 
 :root {
-  font-family: 'LINE Seed Sans TH', sans-serif;
+  font-family: "LINE Seed Sans TH", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -47,8 +47,14 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
   margin: 0 auto;
+
   /*min-width: 320px;*/
   /* display: flex; */
   /* place-items: center; */
