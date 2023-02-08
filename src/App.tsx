@@ -98,18 +98,16 @@ export function App() {
           </Box>
           <Box
             sx={{
-              margin: "0px 0px 30px 0px",
-              [theme.breakpoints.down("md")]: { margin: "0px 0px 30px 0px" },
-              [theme.breakpoints.down("sm")]: { margin: "0px 0px 30px 0px" },
+              margin: "30px 15% 30px 15%",
+              [theme.breakpoints.down("md")]: { margin: "30px" },
+              [theme.breakpoints.down("sm")]: { margin: "30px 10px 30px 10px" },
             }}
           >
-            <Box
+            <Card
               sx={{
                 display: "flex",
-                padding: "2% 150px 2% 150px",
-                backgroundColor: "#fff",
-                [theme.breakpoints.down("md")]: { padding: "2%" },
-                [theme.breakpoints.down("sm")]: { flexDirection: "column", padding: "2%" },
+                padding: "2%",
+                [theme.breakpoints.down("sm")]: { flexDirection: "column" },
               }}
             >
               <CardMedia
@@ -147,11 +145,11 @@ export function App() {
                   </Typography>
                 </CardContent>
               </Box>
-            </Box>
+            </Card>
           </Box>
           <Box
             sx={{
-              margin: "80px 150px 50px 150px",
+              margin: "80px 50px 50px 50px",
               [theme.breakpoints.down("md")]: { margin: "30px" },
               [theme.breakpoints.down("sm")]: { margin: "30px 10px 30px 10px" },
             }}
@@ -211,7 +209,7 @@ export function App() {
           />
 
           <Box sx={{ marginTop: "20px" }}>
-            <Box
+            <Card
               id="Contact"
               sx={{
                 display: "flex",
@@ -219,7 +217,6 @@ export function App() {
                 alignItems: "center",
                 padding: "100px 10px",
                 // margin: "0px 0 0 0",
-                backgroundColor: "#fff",
                 [theme.breakpoints.down("sm")]: { padding: "20px 50px" },
               }}
             >
@@ -248,7 +245,7 @@ export function App() {
               >
                 หรือติดต่อทีมงานของเราเพื่อสอบถามข้อมูลเพิ่มเติม
               </Link>
-            </Box>
+            </Card>
           </Box>
 
           <List
