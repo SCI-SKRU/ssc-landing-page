@@ -18,8 +18,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 
 import theme from "../config/Theme";
 
-const pages = ["HOME", "Products", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = ["STEM", "Camp", "Addicted", "Training", "Contact"];
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -31,17 +30,17 @@ export default function NavBar() {
 
   const handleOpenNavMenu = (event: {
     currentTarget:
-      | HTMLElement
-      | ((prevState: HTMLElement | null) => HTMLElement | null)
-      | null;
+    | HTMLElement
+    | ((prevState: HTMLElement | null) => HTMLElement | null)
+    | null;
   }) => {
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event: {
     currentTarget:
-      | HTMLElement
-      | ((prevState: HTMLElement | null) => HTMLElement | null)
-      | null;
+    | HTMLElement
+    | ((prevState: HTMLElement | null) => HTMLElement | null)
+    | null;
   }) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -60,7 +59,6 @@ export default function NavBar() {
         <AppBar position="static">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
-              <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
               <Typography
                 variant="h6"
                 noWrap
@@ -76,7 +74,7 @@ export default function NavBar() {
                   textDecoration: "none",
                 }}
               >
-                SKRU
+                Sci&Tech ASC
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -109,13 +107,12 @@ export default function NavBar() {
                   }}
                 >
                   {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <MenuItem key={page} onClick={handleCloseNavMenu} href="#">
                       <Typography textAlign="center">{page}</Typography>
                     </MenuItem>
                   ))}
                 </Menu>
               </Box>
-              <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
               <Typography
                 variant="h5"
                 noWrap
@@ -132,12 +129,13 @@ export default function NavBar() {
                   textDecoration: "none",
                 }}
               >
-                SKRU
+                Sci&Tech ASC
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                 {pages.map((page) => (
                   <Button
                     key={page}
+                    href={"#" + page}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: "white", display: "block" }}
                   >
@@ -146,38 +144,6 @@ export default function NavBar() {
                 ))}
               </Box>
 
-              <Box sx={{ flexGrow: 0 }}>
-                <Tooltip title="Open settings">
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar
-                      alt="Remy Sharp"
-                      src="https://divedigital.id/wp-content/uploads/2022/07/2-Aesthetic-Cat-with-Sleepy-Mask.jpg"
-                    />
-                  </IconButton>
-                </Tooltip>
-                <Menu
-                  sx={{ mt: "45px" }}
-                  id="menu-appbar"
-                  anchorEl={anchorElUser}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={Boolean(anchorElUser)}
-                  onClose={handleCloseUserMenu}
-                >
-                  {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      <Typography textAlign="center">{setting}</Typography>
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </Box>
             </Toolbar>
           </Container>
         </AppBar>
