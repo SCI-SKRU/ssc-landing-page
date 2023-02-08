@@ -15,6 +15,9 @@ import { ThemeProvider } from "@mui/material/styles";
 import NavBar from "./components/NavBar";
 import theme from "./config/Theme";
 import video from "./assets/videos/videoTitle.webm";
+import SciLogo from "./assets/images/SciLogo.webp";
+import imageView from "./assets/images/image-view.webp"
+import catImage from "./assets/images/catimage.webp"
 import { ItemConten, Side } from "./components/ItemConten";
 
 export function App() {
@@ -43,7 +46,7 @@ export function App() {
               autoPlay
               loop
               muted
-              poster="https://studentreasures.com/wp-content/uploads/2020/09/back-view-of-elementary-students-raising-their-hands-on-a-class-picture-id1223141903.jpg"
+              poster={imageView}
               style={{
                 display: "block",
                 objectFit: "cover",
@@ -95,23 +98,25 @@ export function App() {
           </Box>
           <Box
             sx={{
-              margin: "30px 15% 30px 15%",
-              [theme.breakpoints.down("md")]: { margin: "30px" },
-              [theme.breakpoints.down("sm")]: { margin: "30px 10px 30px 10px" },
+              margin: "0px 0px 30px 0px",
+              [theme.breakpoints.down("md")]: { margin: "0px 0px 30px 0px" },
+              [theme.breakpoints.down("sm")]: { margin: "0px 0px 30px 0px" },
             }}
           >
-            <Card
+            <Box
               sx={{
                 display: "flex",
-                padding: "2%",
-                [theme.breakpoints.down("sm")]: { flexDirection: "column" },
+                padding: "2% 150px 2% 150px",
+                backgroundColor: "#fff",
+                [theme.breakpoints.down("md")]: { padding: "2%" },
+                [theme.breakpoints.down("sm")]: { flexDirection: "column", padding: "2%" },
               }}
             >
               <CardMedia
                 component="img"
                 alt="alt"
                 sx={{ height: 200, objectFit: "scale-down" }}
-                image="https://sci.skru.ac.th/science/download/formdownload/logo/SciLogoPNG.png"
+                image={SciLogo}
               />
               <Box
                 sx={{
@@ -142,11 +147,11 @@ export function App() {
                   </Typography>
                 </CardContent>
               </Box>
-            </Card>
+            </Box>
           </Box>
           <Box
             sx={{
-              margin: "80px 50px 50px 50px",
+              margin: "80px 150px 50px 150px",
               [theme.breakpoints.down("md")]: { margin: "30px" },
               [theme.breakpoints.down("sm")]: { margin: "30px 10px 30px 10px" },
             }}
@@ -179,30 +184,34 @@ export function App() {
           <ItemConten
             id="STEM"
             side={Side.Left}
+            image={catImage}
             title="สนุก กับ STEM-SSC"
             subtitle="STEM ย่อมาจาก Science, Technology, Engineering and Mathematics หรือการบูรณการความรู้ระหว่าง 4 สาขาวิชา ซึ่งได้แก่ วิทยาศาสตร์ เทคโนโลยี วิศวกรรมศาสตร์ และคณิตศาสตร์ โดยรูปแบบการเรียนรู้ที่นำเอาแกนหลักของสาขาวิชาเหล่านี้มาผสานรวมกันเรียกว่า สะเต็มศึกษา ซึ่งถือเป็นการบูรณาการระหว่างศาสตร์ต่าง ๆ (Interdisciplinary Integration) เพื่อนำเอาจุดเด่นของแต่ละสาขาวิชามาผสมผสานกันอย่างลงตัว โดยมุ่งเน้นไปที่ทักษะหรือการปฏิบัติจริง ไม่ใช่เพียงการเรียนทฤษฎีเท่านั้นความก้าวหน้าทางด้านเทคโนโลยีและวิทยาศาสตร์ ส่งผลให้โลกดิจิทัลและนวัตกรรมกลายเป็นส่วนสำคัญในการพัฒนาด้านต่าง ๆ ในโลกแห่งความจริง ดังนั้น เพื่อเป็นการตอบโจทย์การพัฒนาศักยภาพทรัพยากรบุคคลเพื่อรับมือกับการเปลี่ยนแปลงและความท้าทายของโลกยุคใหม่ ทักษะ STEM จึงเข้ามามีบทบาทสำคัญในการเรียนรู้ การทำงาน และการดำเนินชีวิตของผู้คนในปัจจุบัน SSC มีความพร้อมทั้งบุคลากรและเครื่องมืออุปกรณ์ทางวิทยาศาสตร์ ที่สามารถพัฒนาการเรียนรู้ของน้อง ๆ จากการปฏิบัติจริงผ่านรูปแบบกิจกรรม"
           />
           <ItemConten
             id="Camp"
             side={Side.Right}
+            image={catImage}
             title="สนุก กับ Sci Camp-SSC"
             subtitle="ค่ายวิทยาศาสตร์ 3 วัน 2 คืน หรือ 2 วัน  1 คืน จะประกอบไปด้วยกิจกรรม การทำการทดลองในหัวข้อต่าง ๆ ในห้องปฏิบัติการ สาขา ฟิสิกส์ เคมี ชีววิทยา คอมพิวเตอร์ ที่ได้มาตรฐาน  และ กิจกรรมทางด้านคณิตศาสตร์ ที่มาพร้อมกับสาระความรู้ ความสนุก อัดแน่น นอกจากนี้ยังมีกิจกรรม ดูดาวที่หอดูดาวกลางคืน และกิจกรรมเพื่อสร้างความรู้ ความเข้าใจ ในวิทยาศาสตร์ อีกมากมาย"
           />
           <ItemConten
             id="Addicted"
             side={Side.Left}
+            image={catImage}
             title="สนุก กับ Sci-addicted-SSC"
             subtitle="เติมความรู้ พร้อมความสนุกไปกับ “เติมวิทย์คิดสนุก กับวิทย์รอบตัว” น้อง  ๆ จะได้เรียนรู้เกี่ยวกับการทดลองวิทยาศาสตร์ใกล้ตัวในสาขาวิทยาศาสตร์บริสุทธิ์และวิทยาศาสตร์ประยุกต์ น้อง ๆ สามารถส่งเรื่องวิทยาศาสตร์ที่น้อง ๆ สนใจอยากจะให้เราจัดให้  มาทางช่องทางนี้ได้เลยค่ะ"
           />
           <ItemConten
             id="Training"
             side={Side.Right}
+            image={catImage}
             title="สนุก กับ Sci-training-SSC"
             subtitle="เรามีหัวข้ออบรมให้เลือกมากมายตั้งแต่ ประถมต้น จนถึงมัธยมปลาย ไม่ว่าจะเป็นวิทยาศาสตร์บริสุทธิ์ หรือ วิทยาศาสตร์ประยุกต์"
           />
 
           <Box sx={{ marginTop: "20px" }}>
-            <Card
+            <Box
               id="Contact"
               sx={{
                 display: "flex",
@@ -210,6 +219,7 @@ export function App() {
                 alignItems: "center",
                 padding: "100px 10px",
                 // margin: "0px 0 0 0",
+                backgroundColor: "#fff",
                 [theme.breakpoints.down("sm")]: { padding: "20px 50px" },
               }}
             >
@@ -238,7 +248,7 @@ export function App() {
               >
                 หรือติดต่อทีมงานของเราเพื่อสอบถามข้อมูลเพิ่มเติม
               </Link>
-            </Card>
+            </Box>
           </Box>
 
           <List
