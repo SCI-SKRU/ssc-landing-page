@@ -15,10 +15,10 @@ import { ThemeProvider } from "@mui/material/styles";
 import NavBar from "./components/NavBar";
 import theme from "./config/Theme";
 import video from "./assets/videos/videoTitle.webm";
-import SciLogo from "./assets/images/SciLogo.webp";
-import imageView from "./assets/images/image-view.webp"
-import catImage from "./assets/images/catimage.webp"
+import imageView from "./assets/images/image-view.webp";
+import catImage from "./assets/images/catimage.webp";
 import { ItemConten, Side } from "./components/ItemConten";
+import LOGO from "./assets/images/logo.webp";
 
 export function App() {
   return (
@@ -82,7 +82,7 @@ export function App() {
                   [theme.breakpoints.down("sm")]: { fontSize: 40 },
                 }}
               >
-                SPARKING SCIENCE
+                SPARKLING SCIENCE
               </Typography>
               <Typography
                 variant="body1"
@@ -114,7 +114,7 @@ export function App() {
                 component="img"
                 alt="alt"
                 sx={{ height: 200, objectFit: "scale-down" }}
-                image={SciLogo}
+                image={LOGO}
               />
               <Box
                 sx={{
