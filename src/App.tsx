@@ -16,6 +16,8 @@ import NavBar from "./components/NavBar";
 import theme from "./config/Theme";
 import video from "./assets/videos/videoTitle.webm";
 import { ItemConten, Side } from "./components/ItemConten";
+import LOGO from "./assets/images/logo.webp";
+import BackBiew from "./assets/images/back-view.webp";
 
 export function App() {
   return (
@@ -43,7 +45,7 @@ export function App() {
               autoPlay
               loop
               muted
-              poster="https://studentreasures.com/wp-content/uploads/2020/09/back-view-of-elementary-students-raising-their-hands-on-a-class-picture-id1223141903.jpg"
+              poster={BackBiew}
               style={{
                 display: "block",
                 objectFit: "cover",
@@ -79,7 +81,7 @@ export function App() {
                   [theme.breakpoints.down("sm")]: { fontSize: 40 },
                 }}
               >
-                SPARKING SCIENCE
+                SPARKLING SCIENCE
               </Typography>
               <Typography
                 variant="body1"
@@ -111,7 +113,7 @@ export function App() {
                 component="img"
                 alt="alt"
                 sx={{ height: 200, objectFit: "scale-down" }}
-                image="https://sci.skru.ac.th/science/download/formdownload/logo/SciLogoPNG.png"
+                image={LOGO}
               />
               <Box
                 sx={{
