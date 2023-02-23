@@ -9,7 +9,7 @@ export enum Side {
 
 
 
-export function ItemConten(data: { id: string | null, title: string, subtitle: string, side: Side }) {
+export function ItemConten(data: { id: string | null, title: string, subtitle: string, side: Side, image: string | null }) {
     return (
         <>
             <Box id={data.id}>
@@ -20,8 +20,8 @@ export function ItemConten(data: { id: string | null, title: string, subtitle: s
                     justifyContent: data.side === Side.Left ? "flex-start" : "flex-end",
                     padding: "40px 10px",
                     marginBottom: "20px",
-                    marginRight: data.side === Side.Left ? "30%" : "20px",
-                    marginLeft: data.side === Side.Left ? "20px" : "30%",
+                    marginRight: data.side === Side.Left ? "30%" : "150px",
+                    marginLeft: data.side === Side.Left ? "150px" : "30%",
 
                     [theme.breakpoints.down("md")]: {
                         padding: "20px 10px",
@@ -46,7 +46,7 @@ export function ItemConten(data: { id: string | null, title: string, subtitle: s
                             },
 
                         }}
-                        src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg"
+                        src={data.image!}
                     />
                     <CardContent>
                         <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -69,7 +69,7 @@ export function ItemConten(data: { id: string | null, title: string, subtitle: s
                             },
 
                         }}
-                        src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg"
+                        src={data.image!}
                     />
                 </Box>
             </Box>

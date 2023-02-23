@@ -15,7 +15,10 @@ import { ThemeProvider } from "@mui/material/styles";
 import NavBar from "./components/NavBar";
 import theme from "./config/Theme";
 import video from "./assets/videos/videoTitle.webm";
+import imageView from "./assets/images/image-view.webp";
+import catImage from "./assets/images/catimage.webp";
 import { ItemConten, Side } from "./components/ItemConten";
+import LOGO from "./assets/images/logo.webp";
 
 export function App() {
   return (
@@ -43,7 +46,7 @@ export function App() {
               autoPlay
               loop
               muted
-              poster="https://studentreasures.com/wp-content/uploads/2020/09/back-view-of-elementary-students-raising-their-hands-on-a-class-picture-id1223141903.jpg"
+              poster={imageView}
               style={{
                 display: "block",
                 objectFit: "cover",
@@ -79,7 +82,7 @@ export function App() {
                   [theme.breakpoints.down("sm")]: { fontSize: 40 },
                 }}
               >
-                SPARKING SCIENCE
+                SPARKLING SCIENCE
               </Typography>
               <Typography
                 variant="body1"
@@ -111,7 +114,7 @@ export function App() {
                 component="img"
                 alt="alt"
                 sx={{ height: 200, objectFit: "scale-down" }}
-                image="https://sci.skru.ac.th/science/download/formdownload/logo/SciLogoPNG.png"
+                image={LOGO}
               />
               <Box
                 sx={{
@@ -179,24 +182,28 @@ export function App() {
           <ItemConten
             id="STEM"
             side={Side.Left}
+            image={catImage}
             title="สนุก กับ STEM-SSC"
             subtitle="STEM ย่อมาจาก Science, Technology, Engineering and Mathematics หรือการบูรณการความรู้ระหว่าง 4 สาขาวิชา ซึ่งได้แก่ วิทยาศาสตร์ เทคโนโลยี วิศวกรรมศาสตร์ และคณิตศาสตร์ โดยรูปแบบการเรียนรู้ที่นำเอาแกนหลักของสาขาวิชาเหล่านี้มาผสานรวมกันเรียกว่า สะเต็มศึกษา ซึ่งถือเป็นการบูรณาการระหว่างศาสตร์ต่าง ๆ (Interdisciplinary Integration) เพื่อนำเอาจุดเด่นของแต่ละสาขาวิชามาผสมผสานกันอย่างลงตัว โดยมุ่งเน้นไปที่ทักษะหรือการปฏิบัติจริง ไม่ใช่เพียงการเรียนทฤษฎีเท่านั้นความก้าวหน้าทางด้านเทคโนโลยีและวิทยาศาสตร์ ส่งผลให้โลกดิจิทัลและนวัตกรรมกลายเป็นส่วนสำคัญในการพัฒนาด้านต่าง ๆ ในโลกแห่งความจริง ดังนั้น เพื่อเป็นการตอบโจทย์การพัฒนาศักยภาพทรัพยากรบุคคลเพื่อรับมือกับการเปลี่ยนแปลงและความท้าทายของโลกยุคใหม่ ทักษะ STEM จึงเข้ามามีบทบาทสำคัญในการเรียนรู้ การทำงาน และการดำเนินชีวิตของผู้คนในปัจจุบัน SSC มีความพร้อมทั้งบุคลากรและเครื่องมืออุปกรณ์ทางวิทยาศาสตร์ ที่สามารถพัฒนาการเรียนรู้ของน้อง ๆ จากการปฏิบัติจริงผ่านรูปแบบกิจกรรม"
           />
           <ItemConten
             id="Camp"
             side={Side.Right}
+            image={catImage}
             title="สนุก กับ Sci Camp-SSC"
             subtitle="ค่ายวิทยาศาสตร์ 3 วัน 2 คืน หรือ 2 วัน  1 คืน จะประกอบไปด้วยกิจกรรม การทำการทดลองในหัวข้อต่าง ๆ ในห้องปฏิบัติการ สาขา ฟิสิกส์ เคมี ชีววิทยา คอมพิวเตอร์ ที่ได้มาตรฐาน  และ กิจกรรมทางด้านคณิตศาสตร์ ที่มาพร้อมกับสาระความรู้ ความสนุก อัดแน่น นอกจากนี้ยังมีกิจกรรม ดูดาวที่หอดูดาวกลางคืน และกิจกรรมเพื่อสร้างความรู้ ความเข้าใจ ในวิทยาศาสตร์ อีกมากมาย"
           />
           <ItemConten
             id="Addicted"
             side={Side.Left}
+            image={catImage}
             title="สนุก กับ Sci-addicted-SSC"
             subtitle="เติมความรู้ พร้อมความสนุกไปกับ “เติมวิทย์คิดสนุก กับวิทย์รอบตัว” น้อง  ๆ จะได้เรียนรู้เกี่ยวกับการทดลองวิทยาศาสตร์ใกล้ตัวในสาขาวิทยาศาสตร์บริสุทธิ์และวิทยาศาสตร์ประยุกต์ น้อง ๆ สามารถส่งเรื่องวิทยาศาสตร์ที่น้อง ๆ สนใจอยากจะให้เราจัดให้  มาทางช่องทางนี้ได้เลยค่ะ"
           />
           <ItemConten
             id="Training"
             side={Side.Right}
+            image={catImage}
             title="สนุก กับ Sci-training-SSC"
             subtitle="เรามีหัวข้ออบรมให้เลือกมากมายตั้งแต่ ประถมต้น จนถึงมัธยมปลาย ไม่ว่าจะเป็นวิทยาศาสตร์บริสุทธิ์ หรือ วิทยาศาสตร์ประยุกต์"
           />
