@@ -237,7 +237,7 @@ export function App() {
                 [theme.breakpoints.down('sm')]: { marginBottom: '30px' },
               }}
             />
-            <Typography variant="h6">งานศูนย์เครื่องมือกลาง มหาวิทยาลัยราชภัฏสงขลา</Typography>
+            <Typography variant="h6">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏสงขลา</Typography>
             <Typography variant="body2">
               160 ม.4 ถ.กาญจนวนิช ต.เขารูปช้าง อ.เมือง จ.สงขลา 90000
             </Typography>
