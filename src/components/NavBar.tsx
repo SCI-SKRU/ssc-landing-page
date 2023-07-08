@@ -18,7 +18,7 @@ import AdbIcon from '@mui/icons-material/Adb'
 
 import theme from '../config/Theme'
 
-const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDS TO SCIENCE', 'CONTACT']
+const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE', 'CONTACT']
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
