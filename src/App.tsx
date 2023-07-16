@@ -16,8 +16,8 @@ import NavBar from "./components/NavBar";
 import theme from "./config/Theme";
 import video from "./assets/videos/videoTitle.webm";
 import SciLogo from "./assets/images/SciLogo.webp";
-import imageView from "./assets/images/image-view.webp"
-import catImage from "./assets/images/catimage.webp"
+import imageView from "./assets/images/image-view.webp";
+import catImage from "./assets/images/catimage.webp";
 import { ItemConten, Side } from "./components/ItemConten";
 
 export function App() {

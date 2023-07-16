@@ -1,20 +1,18 @@
 import * as React from "react";
 import {
   AppBar,
-  Avatar,
   Box,
   Container,
   Menu,
   MenuItem,
   Toolbar,
-  Tooltip,
   Typography,
   Button,
   IconButton,
 } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-import AdbIcon from "@mui/icons-material/Adb";
+import { Link } from "react-router-dom";
 
 import theme from "../config/Theme";
 
@@ -30,17 +28,17 @@ export default function NavBar() {
 
   const handleOpenNavMenu = (event: {
     currentTarget:
-    | HTMLElement
-    | ((prevState: HTMLElement | null) => HTMLElement | null)
-    | null;
+      | HTMLElement
+      | ((prevState: HTMLElement | null) => HTMLElement | null)
+      | null;
   }) => {
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event: {
     currentTarget:
-    | HTMLElement
-    | ((prevState: HTMLElement | null) => HTMLElement | null)
-    | null;
+      | HTMLElement
+      | ((prevState: HTMLElement | null) => HTMLElement | null)
+      | null;
   }) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -107,7 +105,11 @@ export default function NavBar() {
                   }}
                 >
                   {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu} href="#">
+                    <MenuItem
+                      component={Link}
+                      to={"#" + page}
+                      onClick={handleCloseNavMenu}
+                    >
                       <Typography textAlign="center">{page}</Typography>
                     </MenuItem>
                   ))}
@@ -143,7 +145,6 @@ export default function NavBar() {
                   </Button>
                 ))}
               </Box>
-
             </Toolbar>
           </Container>
         </AppBar>
