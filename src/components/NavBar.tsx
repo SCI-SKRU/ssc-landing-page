@@ -10,13 +10,14 @@ import {
   Button,
   IconButton,
 } from "@mui/material";
+
+import { Link } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
 
 import theme from "../config/Theme";
 
-const pages = ["STEM", "Camp", "Addicted", "Training", "Contact"];
+const pages = ["STEM", "SCICAMP", "SCITEREST", "HANDStoSCIENCE", "CONTACT"];
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
