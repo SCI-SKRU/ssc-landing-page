@@ -96,7 +96,11 @@ export default function NavBar() {
                   }}
                 >
                   {pages.map((page) => (
-                    <MenuItem component={Link} to={'#' + page} onClick={handleCloseNavMenu}>
+                    <MenuItem
+                      component={Link}
+                      to={page === 'CONTACT' ? 'https://lin.ee/zMoVhSI' : '#' + page}
+                      onClick={handleCloseNavMenu}
+                    >
                       <Typography textAlign="center">{page}</Typography>
                     </MenuItem>
                   ))}
@@ -124,7 +128,7 @@ export default function NavBar() {
                 {pages.map((page) => (
                   <Button
                     key={page}
-                    href={'#' + page}
+                    href={page === 'CONTACT' ? 'https://lin.ee/zMoVhSI' : '#' + page}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
