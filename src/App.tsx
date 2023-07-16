@@ -9,38 +9,38 @@ import {
   Link,
   List,
   Typography,
-} from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
+} from '@mui/material'
+import { ThemeProvider } from '@mui/material/styles'
 
-import NavBar from "./components/NavBar";
-import theme from "./config/Theme";
-import video from "./assets/videos/videoTitle.webm";
-import imageView from "./assets/images/image-view.webp";
-import SciCampImg from "./assets/images/thumbnails/SCICAMP_SSC.jpg";
-import SciencesImg from "./assets/images/thumbnails/SCIENCES_SSC.jpg";
-import SciTerestImg from "./assets/images/thumbnails/SCITEREST_SSC.jpg";
-import StemImg from "./assets/images/thumbnails/STEM_SSC.jpg";
-import { ItemConten, Side } from "./components/ItemConten";
-import LOGO from "./assets/images/logo.webp";
+import NavBar from './components/NavBar'
+import theme from './config/Theme'
+import video from './assets/videos/videoTitle.webm'
+import imageView from './assets/images/image-view.webp'
+import SciCampImg from './assets/images/thumbnails/SCICAMP_SSC.jpg'
+import SciencesImg from './assets/images/thumbnails/SCIENCES_SSC.jpg'
+import SciTerestImg from './assets/images/thumbnails/SCITEREST_SSC.jpg'
+import StemImg from './assets/images/thumbnails/STEM_SSC.jpg'
+import { ItemConten, Side } from './components/ItemConten'
+import LOGO from './assets/images/logo.webp'
 
 export function App() {
   return (
     <>
       <NavBar />
       <ThemeProvider theme={theme}>
-        <Box sx={{ display: "grid" }}>
+        <Box sx={{ display: 'grid' }}>
           <Box
             sx={{
-              position: "relative",
-              backgroundColor: "#000",
-              "&:before": {
+              position: 'relative',
+              backgroundColor: '#000',
+              '&:before': {
                 content: '""',
-                display: "block",
-                position: "absolute",
-                left: "0",
-                top: "0",
-                width: "100%",
-                height: "100%",
+                display: 'block',
+                position: 'absolute',
+                left: '0',
+                top: '0',
+                width: '100%',
+                height: '100%',
                 boxShadow: 3,
               },
             }}
@@ -51,11 +51,11 @@ export function App() {
               muted
               poster={imageView}
               style={{
-                display: "block",
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-                position: "absolute",
+                display: 'block',
+                objectFit: 'cover',
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
                 opacity: 0.3,
                 top: 0,
                 left: 0,
@@ -65,24 +65,24 @@ export function App() {
             </video>
             <Box
               sx={{
-                position: "relative",
-                float: "right",
-                display: "inline-flex",
-                flexDirection: "column",
-                textAlign: "center",
-                padding: "18% 10% 18% 10%",
-                margin: "0 auto",
-                textShadow: "2px 2px 10px #0000009A",
-                color: "#f5f5f5",
+                position: 'relative',
+                float: 'right',
+                display: 'inline-flex',
+                flexDirection: 'column',
+                textAlign: 'center',
+                padding: '18% 10% 18% 10%',
+                margin: '0 auto',
+                textShadow: '2px 2px 10px #0000009A',
+                color: '#f5f5f5',
               }}
             >
               <Typography
                 variant="h1"
                 sx={{
-                  margin: "0 auto",
+                  margin: '0 auto',
                   fontSize: 60,
-                  fontWeight: "bold",
-                  [theme.breakpoints.down("sm")]: { fontSize: 40 },
+                  fontWeight: 'bold',
+                  [theme.breakpoints.down('sm')]: { fontSize: 40 },
                 }}
               >
                 SPARKLING SCIENCE
@@ -90,9 +90,9 @@ export function App() {
               <Typography
                 variant="body1"
                 sx={{
-                  margin: "0 auto",
+                  margin: '0 auto',
                   fontSize: 20,
-                  [theme.breakpoints.down("sm")]: { fontSize: 16 },
+                  [theme.breakpoints.down('sm')]: { fontSize: 16 },
                 }}
               >
                 จุดประกายวิทยาศาสตร์ในตัวคุณ
@@ -101,36 +101,35 @@ export function App() {
           </Box>
           <Box
             sx={{
-              margin: "30px 15% 30px 15%",
-              [theme.breakpoints.down("md")]: { margin: "30px" },
-              [theme.breakpoints.down("sm")]: { margin: "30px 10px 30px 10px" },
+              margin: '30px 15% 30px 15%',
+              [theme.breakpoints.down('md')]: { margin: '30px' },
+              [theme.breakpoints.down('sm')]: { margin: '30px 10px 30px 10px' },
             }}
           >
             <Card
               sx={{
-                display: "flex",
-                padding: "2%",
-                [theme.breakpoints.down("sm")]: { flexDirection: "column" },
+                display: 'flex',
+                padding: '2%',
+                [theme.breakpoints.down('sm')]: { flexDirection: 'column' },
               }}
             >
               <CardMedia
                 component="img"
                 alt="alt"
-                sx={{ height: 200, objectFit: "scale-down" }}
+                sx={{ height: 200, objectFit: 'scale-down' }}
                 image={LOGO}
               />
               <Box
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
               >
                 <CardContent>
                   <Typography variant="body2">
-                    &emsp;&emsp;คณะวิทยาศาสตร์และเทคโนโลยี
-                    มหาวิทยาลัยราชภัฏสงขลา ได้เปิดศูนย์บริการวิชาการ (Academic
-                    Service Center Sci&Tech SKRU) ในชื่อ “SPARKLING SCIENCE:
-                    SSC” <br />
+                    &emsp;&emsp;คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏสงขลา
+                    ได้เปิดศูนย์บริการวิชาการ (Academic Service Center Sci&Tech SKRU) ในชื่อ
+                    “SPARKLING SCIENCE: SSC” <br />
                     จุดประกายวิทยาศาสตร์ในตัวคุณ โดย
                     มีวัตถุประสงค์เพื่อบริการวิชาการด้านวิทยาศาสตร์และเทคโนโลยีให้กับท้องถิ่นในหลากหลายมิติ
                     เช่น หลักสูตรฝึกอบรมระยะสั้น ได้แก่ STEM-SSC, SCICAMP-SSC
@@ -139,10 +138,9 @@ export function App() {
                   <Typography variant="body2">
                     &emsp;&emsp;นอกจากนี้ยังมีการให้ความรู้ทางด้านวิทยาศาสตร์และเทคโนยีผ่าน
                     SCITEREST-SSC เติมวิทย์คิดสนุกกับวิทยาศาสตร์รอบตัว และ
-                    บริการให้คำปรึกษาในการพัฒนาผลิตภัณฑ์ต่าง ๆ
-                    ด้วยวิทยาศาสตร์เทคโนโลยีและนวัตกรรม หรือ
-                    ด้านโครงงานทางวิทยาศาสตร์สำหรับโรงเรียนระดับประถมและมัธยมศึกษา
-                    ภายใต้ HANDS TO SCIENCES เป็นต้น
+                    บริการให้คำปรึกษาในการพัฒนาผลิตภัณฑ์ต่าง ๆ ด้วยวิทยาศาสตร์เทคโนโลยีและนวัตกรรม
+                    หรือ ด้านโครงงานทางวิทยาศาสตร์สำหรับโรงเรียนระดับประถมและมัธยมศึกษา ภายใต้ HANDS
+                    TO SCIENCES เป็นต้น
                   </Typography>
                 </CardContent>
               </Box>
@@ -150,9 +148,9 @@ export function App() {
           </Box>
           <Box
             sx={{
-              margin: "80px 50px 50px 50px",
-              [theme.breakpoints.down("md")]: { margin: "30px" },
-              [theme.breakpoints.down("sm")]: { margin: "30px 10px 30px 10px" },
+              margin: '80px 50px 50px 50px',
+              [theme.breakpoints.down('md')]: { margin: '30px' },
+              [theme.breakpoints.down('sm')]: { margin: '30px 10px 30px 10px' },
             }}
           ></Box>
 
@@ -185,16 +183,16 @@ export function App() {
             subtitle="หากท่านมีปัญหาเกี่ยวกับโครงงานวิทยาศาสตร์สำหรับโรงเรียนระดับประถมและมัธยมศึกษา หรือการพัฒนาผลิตภัณฑ์ต่าง ๆ ด้วย วิทยาศาสตร์ เทคโนโลยี และนวัตกรรม เรามีบริการให้คำปรึกษาค่ะ"
           />
 
-          <Box sx={{ marginTop: "20px" }}>
+          <Box sx={{ marginTop: '20px' }}>
             <Card
               id="CONTACT"
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                padding: "100px 10px",
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: '100px 10px',
                 // margin: "0px 0 0 0",
-                [theme.breakpoints.down("sm")]: { padding: "20px 50px" },
+                [theme.breakpoints.down('sm')]: { padding: '20px 50px' },
               }}
             >
               <Typography variant="h5">
@@ -204,12 +202,12 @@ export function App() {
                 variant="contained"
                 sx={{
                   fontSize: 20,
-                  padding: "15px 60px",
-                  margin: "30px 0 10px 0",
-                  width: "500px",
-                  borderRadius: "16px",
-                  [theme.breakpoints.down("sm")]: {
-                    width: "300px",
+                  padding: '15px 60px',
+                  margin: '30px 0 10px 0',
+                  width: '500px',
+                  borderRadius: '16px',
+                  [theme.breakpoints.down('sm')]: {
+                    width: '300px',
                     fontSize: 16,
                   },
                 }}
@@ -217,8 +215,8 @@ export function App() {
                 เข้ามาดูหลักสูตรอบรมก่อนสิ
               </Button>
               <Link
-                href="#"
-                sx={{ [theme.breakpoints.down("sm")]: { fontSize: 14 } }}
+                href="https://lin.ee/zMoVhSI"
+                sx={{ [theme.breakpoints.down('sm')]: { fontSize: 14 } }}
               >
                 หรือติดต่อทีมงานของเราเพื่อสอบถามข้อมูลเพิ่มเติม
               </Link>
@@ -229,31 +227,29 @@ export function App() {
             sx={{
               // display: "flex",
               // flexDirection: "column",
-              textAlign: "center",
-              padding: "100px 250px",
+              textAlign: 'center',
+              padding: '100px 250px',
               // margin: "0px 0 0 0",
-              [theme.breakpoints.down("md")]: { padding: "80px 20px" },
-              [theme.breakpoints.down("sm")]: { padding: "40px 20px" },
+              [theme.breakpoints.down('md')]: { padding: '80px 20px' },
+              [theme.breakpoints.down('sm')]: { padding: '40px 20px' },
             }}
           >
             <Divider
               sx={{
-                marginBottom: "50px",
-                [theme.breakpoints.down("sm")]: { marginBottom: "30px" },
+                marginBottom: '50px',
+                [theme.breakpoints.down('sm')]: { marginBottom: '30px' },
               }}
             />
-            <Typography variant="h6">
-              คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏสงขลา
-            </Typography>
+            <Typography variant="h6">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏสงขลา</Typography>
             <Typography variant="body2">
               160 ม.4 ถ.กาญจนวนิช ต.เขารูปช้าง อ.เมือง จ.สงขลา 90000
             </Typography>
-            <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+            <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
               Tel.074-260288 Fax.074-336920 Email: sciskru@gmail.com
             </Typography>
           </List>
         </Box>
       </ThemeProvider>
     </>
-  );
+  )
 }
