@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   AppBar,
   Box,
@@ -9,52 +9,42 @@ import {
   Typography,
   Button,
   IconButton,
-} from "@mui/material";
+} from '@mui/material'
 
-import { Link } from "react-router-dom";
-import { ThemeProvider } from "@mui/material/styles";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from 'react-router-dom'
+import { ThemeProvider } from '@mui/material/styles'
+import MenuIcon from '@mui/icons-material/Menu'
 
-import theme from "../config/Theme";
+import theme from '../config/Theme'
 
-const pages = ["STEM", "SCICAMP", "SCITEREST", "HANDStoSCIENCE", "CONTACT"];
+const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE', 'CONTACT']
 
 export default function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: {
-    currentTarget:
-      | HTMLElement
-      | ((prevState: HTMLElement | null) => HTMLElement | null)
-      | null;
+    currentTarget: HTMLElement | ((prevState: HTMLElement | null) => HTMLElement | null) | null
   }) => {
-    setAnchorElNav(event.currentTarget);
-  };
+    setAnchorElNav(event.currentTarget)
+  }
   const handleOpenUserMenu = (event: {
-    currentTarget:
-      | HTMLElement
-      | ((prevState: HTMLElement | null) => HTMLElement | null)
-      | null;
+    currentTarget: HTMLElement | ((prevState: HTMLElement | null) => HTMLElement | null) | null
   }) => {
-    setAnchorElUser(event.currentTarget);
-  };
+    setAnchorElUser(event.currentTarget)
+  }
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+    setAnchorElNav(null)
+  }
 
   const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+    setAnchorElUser(null)
+  }
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: "grid" }}>
+      <Box sx={{ display: 'grid' }}>
         <AppBar position="static">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -65,18 +55,18 @@ export default function NavBar() {
                 href="/"
                 sx={{
                   mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
+                  display: { xs: 'none', md: 'flex' },
+                  fontFamily: 'monospace',
                   fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "inherit",
-                  textDecoration: "none",
+                  letterSpacing: '.3rem',
+                  color: 'inherit',
+                  textDecoration: 'none',
                 }}
               >
                 Sci&Tech ASC
               </Typography>
 
-              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
                   size="large"
                   aria-label="account of current user"
@@ -91,26 +81,22 @@ export default function NavBar() {
                   id="menu-appbar"
                   anchorEl={anchorElNav}
                   anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
+                    vertical: 'bottom',
+                    horizontal: 'left',
                   }}
                   keepMounted
                   transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
+                    vertical: 'top',
+                    horizontal: 'left',
                   }}
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
                   sx={{
-                    display: { xs: "block", md: "none" },
+                    display: { xs: 'block', md: 'none' },
                   }}
                 >
                   {pages.map((page) => (
-                    <MenuItem
-                      component={Link}
-                      to={"#" + page}
-                      onClick={handleCloseNavMenu}
-                    >
+                    <MenuItem component={Link} to={'#' + page} onClick={handleCloseNavMenu}>
                       <Typography textAlign="center">{page}</Typography>
                     </MenuItem>
                   ))}
@@ -123,24 +109,24 @@ export default function NavBar() {
                 href=""
                 sx={{
                   mr: 2,
-                  display: { xs: "flex", md: "none" },
+                  display: { xs: 'flex', md: 'none' },
                   flexGrow: 1,
-                  fontFamily: "monospace",
+                  fontFamily: 'monospace',
                   fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "inherit",
-                  textDecoration: "none",
+                  letterSpacing: '.3rem',
+                  color: 'inherit',
+                  textDecoration: 'none',
                 }}
               >
-                Sci&Tech ASC
+                Sci&Tech SSC
               </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
                   <Button
                     key={page}
-                    href={"#" + page}
+                    href={'#' + page}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
                   >
                     {page}
                   </Button>
@@ -151,5 +137,5 @@ export default function NavBar() {
         </AppBar>
       </Box>
     </ThemeProvider>
-  );
+  )
 }
