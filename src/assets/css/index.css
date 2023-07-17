@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'Sarabun';
-  src: url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap');
+  src: url('../../assets/fonts/Sarabun-Light.ttf') format('ttf');
   font-style: normal;
   font-weight: 300;
 }
