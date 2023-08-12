@@ -20,25 +20,15 @@ const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE', 'CONTACT']
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: {
     currentTarget: HTMLElement | ((prevState: HTMLElement | null) => HTMLElement | null) | null
   }) => {
     setAnchorElNav(event.currentTarget)
   }
-  const handleOpenUserMenu = (event: {
-    currentTarget: HTMLElement | ((prevState: HTMLElement | null) => HTMLElement | null) | null
-  }) => {
-    setAnchorElUser(event.currentTarget)
-  }
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null)
-  }
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null)
   }
 
   return (
