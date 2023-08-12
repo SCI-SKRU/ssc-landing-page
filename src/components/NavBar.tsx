@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useState } from 'preact/hooks'
 import {
   AppBar,
   Box,
@@ -19,7 +19,7 @@ import theme from '../config/Theme'
 const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE', 'CONTACT']
 
 export default function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: {
     currentTarget: HTMLElement | ((prevState: HTMLElement | null) => HTMLElement | null) | null
