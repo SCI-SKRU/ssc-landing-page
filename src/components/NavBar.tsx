@@ -11,7 +11,6 @@ import {
   IconButton,
 } from '@mui/material'
 
-import { Link } from 'react-router-dom'
 import { ThemeProvider } from '@mui/material/styles'
 import MenuIcon from '@mui/icons-material/Menu'
 
@@ -97,7 +96,7 @@ export default function NavBar() {
                 >
                   {pages.map((page) => (
                     <MenuItem
-                      component={Link}
+                      // component={Link}
                       to={page === 'CONTACT' ? 'https://lin.ee/zMoVhSI' : '#' + page}
                       onClick={handleCloseNavMenu}
                     >
