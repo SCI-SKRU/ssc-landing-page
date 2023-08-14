@@ -87,7 +87,13 @@ export default function NavBar() {
                   {pages.map((page) => (
                     <MenuItem>
                       <Typography textAlign="center">
-                        <Link onClick={handleCloseNavMenu} to={page} spy={true} smooth={true}>
+                        <Link
+                          onClick={handleCloseNavMenu}
+                          to={page}
+                          spy={true}
+                          smooth={true}
+                          duration={100}
+                        >
                           {page}
                         </Link>
                       </Typography>
