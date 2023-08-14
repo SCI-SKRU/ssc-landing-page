@@ -1,4 +1,5 @@
-import * as React from 'react'
+import { useState } from 'preact/hooks'
+import { Link } from 'react-scroll'
 import {
   AppBar,
   Box,
@@ -9,37 +10,26 @@ import {
   Typography,
   Button,
   IconButton,
+  Link as MuiLink,
 } from '@mui/material'
-
-import { Link } from 'react-router-dom'
-import { ThemeProvider } from '@mui/material/styles'
 import MenuIcon from '@mui/icons-material/Menu'
+import { ThemeProvider } from '@mui/material/styles'
 
 import theme from '../config/Theme'
 
-const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE', 'CONTACT']
+const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE']
 
 export default function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null)
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: {
     currentTarget: HTMLElement | ((prevState: HTMLElement | null) => HTMLElement | null) | null
   }) => {
     setAnchorElNav(event.currentTarget)
   }
-  const handleOpenUserMenu = (event: {
-    currentTarget: HTMLElement | ((prevState: HTMLElement | null) => HTMLElement | null) | null
-  }) => {
-    setAnchorElUser(event.currentTarget)
-  }
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null)
-  }
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null)
   }
 
   return (
@@ -52,7 +42,6 @@ export default function NavBar() {
                 variant="h6"
                 noWrap
                 component="a"
-                href="/"
                 sx={{
                   mr: 2,
                   display: { xs: 'none', md: 'flex' },
@@ -63,7 +52,7 @@ export default function NavBar() {
                   textDecoration: 'none',
                 }}
               >
-                Sci&Tech ASC
+                Sci&Tech SSC
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -96,21 +85,31 @@ export default function NavBar() {
                   }}
                 >
                   {pages.map((page) => (
-                    <MenuItem
-                      component={Link}
-                      to={page === 'CONTACT' ? 'https://lin.ee/zMoVhSI' : '#' + page}
-                      onClick={handleCloseNavMenu}
-                    >
-                      <Typography textAlign="center">{page}</Typography>
+                    <MenuItem>
+                      <Typography textAlign="center">
+                        <Link
+                          onClick={handleCloseNavMenu}
+                          to={page}
+                          spy={true}
+                          smooth={true}
+                          duration={100}
+                        >
+                          {page}
+                        </Link>
+                      </Typography>
                     </MenuItem>
                   ))}
+                  <MenuItem>
+                    <MuiLink href="https://lin.ee/zMoVhSI" color={'black'} underline="none">
+                      <Typography textAlign="center">CONTACT</Typography>
+                    </MuiLink>
+                  </MenuItem>
                 </Menu>
               </Box>
               <Typography
                 variant="h5"
                 noWrap
                 component="a"
-                href=""
                 sx={{
                   mr: 2,
                   display: { xs: 'flex', md: 'none' },
@@ -126,15 +125,18 @@ export default function NavBar() {
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
-                  <Button
-                    key={page}
-                    href={page === 'CONTACT' ? 'https://lin.ee/zMoVhSI' : '#' + page}
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
-                  >
-                    {page}
+                  <Button sx={{ my: 2, color: 'white', display: 'block' }}>
+                    <Link to={page} spy={true} smooth={true} duration={100}>
+                      {page}
+                    </Link>
                   </Button>
                 ))}
+                <Button
+                  href="https://lin.ee/zMoVhSI"
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  CONTACT
+                </Button>
               </Box>
             </Toolbar>
           </Container>

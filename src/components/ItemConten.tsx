@@ -1,6 +1,7 @@
-import { Box, Card, Avatar, CardContent, Typography } from "@mui/material";
-import theme from "../config/Theme";
-import { HashScroll } from "react-hash-scroll";
+import { Box, Avatar, CardContent, Typography } from '@mui/material'
+import { Element } from 'react-scroll'
+
+import theme from '../config/Theme'
 
 export enum Side {
   Left,
@@ -8,36 +9,36 @@ export enum Side {
 }
 
 export function ItemConten(data: {
-  id: string | null;
-  title: string;
-  subtitle: string;
-  side: Side;
-  image: string | null;
+  id: string | null
+  title: string
+  subtitle: string
+  side: Side
+  image: string | null
 }) {
   return (
     <>
-      <HashScroll hash={"#" + data.id}>
+      <Element name={data.id!}>
         <Box
           sx={{
-            display: "flex",
-            textAlign: data.side === Side.Left ? "left" : "right",
-            alignItems: data.side === Side.Left ? "left" : "right",
-            justifyContent: data.side === Side.Left ? "flex-start" : "flex-end",
-            padding: "40px 10px",
-            marginBottom: "20px",
-            marginRight: data.side === Side.Left ? "30%" : "150px",
-            marginLeft: data.side === Side.Left ? "150px" : "30%",
+            display: 'flex',
+            textAlign: data.side === Side.Left ? 'left' : 'right',
+            alignItems: data.side === Side.Left ? 'left' : 'right',
+            justifyContent: data.side === Side.Left ? 'flex-start' : 'flex-end',
+            padding: '40px 10px',
+            marginBottom: '20px',
+            marginRight: data.side === Side.Left ? '30%' : '150px',
+            marginLeft: data.side === Side.Left ? '150px' : '30%',
 
-            [theme.breakpoints.down("md")]: {
-              padding: "20px 10px",
-              marginRight: "10px",
-              marginLeft: "10px",
+            [theme.breakpoints.down('md')]: {
+              padding: '20px 10px',
+              marginRight: '10px',
+              marginLeft: '10px',
             },
 
-            [theme.breakpoints.down("sm")]: {
-              textAlign: "center",
-              alignItems: "center",
-              flexDirection: "column",
+            [theme.breakpoints.down('sm')]: {
+              textAlign: 'center',
+              alignItems: 'center',
+              flexDirection: 'column',
             },
           }}
         >
@@ -45,17 +46,17 @@ export function ItemConten(data: {
             sx={{
               height: 200,
               width: 200,
-              marginRight: "30px",
-              display: data.side === Side.Left ? "flex" : "none",
-              [theme.breakpoints.down("sm")]: {
-                display: "flex",
-                marginRight: "0",
+              marginRight: '30px',
+              display: data.side === Side.Left ? 'flex' : 'none',
+              [theme.breakpoints.down('sm')]: {
+                display: 'flex',
+                marginRight: '0',
               },
             }}
             src={data.image!}
           />
           <CardContent>
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <Typography variant="h5">{data.title}</Typography>
               <Typography variant="body2" color="text.secondary">
                 &emsp;&emsp;{data.subtitle}
@@ -67,17 +68,17 @@ export function ItemConten(data: {
             sx={{
               height: 200,
               width: 200,
-              marginLeft: "30px",
-              display: data.side === Side.Left ? "none" : "flex",
+              marginLeft: '30px',
+              display: data.side === Side.Left ? 'none' : 'flex',
 
-              [theme.breakpoints.down("sm")]: {
-                display: "none",
+              [theme.breakpoints.down('sm')]: {
+                display: 'none',
               },
             }}
             src={data.image!}
           />
         </Box>
-      </HashScroll>
+      </Element>
     </>
-  );
+  )
 }
