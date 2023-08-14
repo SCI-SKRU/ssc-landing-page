@@ -1,4 +1,5 @@
 import { useState } from 'preact/hooks'
+import { Link } from 'react-scroll'
 import {
   AppBar,
   Box,
@@ -9,15 +10,14 @@ import {
   Typography,
   Button,
   IconButton,
+  Link as MuiLink,
 } from '@mui/material'
-
-import { ThemeProvider } from '@mui/material/styles'
 import MenuIcon from '@mui/icons-material/Menu'
+import { ThemeProvider } from '@mui/material/styles'
 
 import theme from '../config/Theme'
-import { Link } from 'react-scroll'
 
-const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE', 'CONTACT']
+const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE']
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
@@ -87,12 +87,17 @@ export default function NavBar() {
                   {pages.map((page) => (
                     <MenuItem>
                       <Typography textAlign="center">
-                        <Link to={page} spy={true} smooth={true}>
+                        <Link onClick={handleCloseNavMenu} to={page} spy={true} smooth={true}>
                           {page}
                         </Link>
                       </Typography>
                     </MenuItem>
                   ))}
+                  <MenuItem>
+                    <MuiLink href="https://lin.ee/zMoVhSI" color={'black'} underline="none">
+                      <Typography textAlign="center">CONTACT</Typography>
+                    </MuiLink>
+                  </MenuItem>
                 </Menu>
               </Box>
               <Typography
@@ -120,6 +125,12 @@ export default function NavBar() {
                     </Link>
                   </Button>
                 ))}
+                <Button
+                  href="https://lin.ee/zMoVhSI"
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  CONTACT
+                </Button>
               </Box>
             </Toolbar>
           </Container>
