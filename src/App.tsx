@@ -185,7 +185,6 @@ export function App() {
 
           <Box sx={{ marginTop: '20px' }}>
             <Card
-              id="CONTACT"
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
