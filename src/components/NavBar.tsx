@@ -120,7 +120,7 @@ export default function NavBar() {
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
                   <Button sx={{ my: 2, color: 'white', display: 'block' }}>
-                    <Link to={page} spy={true} smooth={true}>
+                    <Link to={page} spy={true} smooth={true} duration={100}>
                       {page}
                     </Link>
                   </Button>
