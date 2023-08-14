@@ -15,6 +15,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import MenuIcon from '@mui/icons-material/Menu'
 
 import theme from '../config/Theme'
+import { Link } from 'react-scroll'
 
 const pages = ['STEM', 'SCICAMP', 'SCITEREST', 'HANDStoSCIENCE', 'CONTACT']
 
@@ -85,12 +86,12 @@ export default function NavBar() {
                   }}
                 >
                   {pages.map((page) => (
-                    <MenuItem
-                      // component={Link}
-                      to={page === 'CONTACT' ? 'https://lin.ee/zMoVhSI' : '#' + page}
-                      onClick={handleCloseNavMenu}
-                    >
-                      <Typography textAlign="center">{page}</Typography>
+                    <MenuItem>
+                      <Typography textAlign="center">
+                        <Link to={page} spy={true} smooth={true}>
+                          {page}
+                        </Link>
+                      </Typography>
                     </MenuItem>
                   ))}
                 </Menu>
@@ -115,13 +116,10 @@ export default function NavBar() {
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
-                  <Button
-                    key={page}
-                    href={page === 'CONTACT' ? 'https://lin.ee/zMoVhSI' : '#' + page}
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
-                  >
-                    {page}
+                  <Button sx={{ my: 2, color: 'white', display: 'block' }}>
+                    <Link to={page} spy={true} smooth={true}>
+                      {page}
+                    </Link>
                   </Button>
                 ))}
               </Box>
