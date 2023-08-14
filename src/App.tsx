@@ -1,3 +1,4 @@
+import { Element } from 'react-scroll'
 import {
   Box,
   Button,
@@ -190,7 +191,6 @@ export function App() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 padding: '100px 10px',
-                // margin: "0px 0 0 0",
                 [theme.breakpoints.down('sm')]: { padding: '20px 50px' },
               }}
             >
@@ -224,11 +224,8 @@ export function App() {
 
           <List
             sx={{
-              // display: "flex",
-              // flexDirection: "column",
               textAlign: 'center',
               padding: '100px 250px',
-              // margin: "0px 0 0 0",
               [theme.breakpoints.down('md')]: { padding: '80px 20px' },
               [theme.breakpoints.down('sm')]: { padding: '40px 20px' },
             }}
